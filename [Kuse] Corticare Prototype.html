@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corticare Prototype</title>
+    <style>
+        :root {
+            --primary: #8EB69B;
+            --bg: #F9FBF9;
+            --text: #2D3436;
+            --accent: #FFD93D;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; align-items: center; }
+        .app-container { width: 375px; height: 812px; background: white; border: 8px solid #333; border-radius: 40px; margin: 20px; overflow: hidden; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .header { padding: 40px 20px 20px; text-align: center; background: linear-gradient(135deg, #E0F2F1, #FFFFFF); }
+        .score-circle { width: 180px; height: 180px; border-radius: 50%; border: 12px solid var(--primary); margin: 20px auto; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+        .score-value { font-size: 48px; font-weight: bold; color: var(--primary); }
+        .score-label { font-size: 14px; color: #636E72; }
+        .status-badge { background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-top: 10px; }
+        .cards { padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .card { background: #F0F7F4; padding: 15px; border-radius: 20px; text-align: left; }
+        .card h3 { margin: 0; font-size: 14px; color: #636E72; }
+        .card p { margin: 5px 0 0; font-size: 18px; font-weight: 600; }
+        .nav { position: absolute; bottom: 0; width: 100%; height: 70px; border-top: 1px solid #EEE; display: flex; justify-content: space-around; align-items: center; background: white; }
+        .nav-item { font-size: 10px; color: #B2BEC3; text-align: center; }
+        .nav-item.active { color: var(--primary); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1 style="margin:0; font-size: 24px;">Good Morning, Alex</h1>
+            <p style="color: #636E72; font-size: 14px;">Your balance is looking stable today.</p>
+            <div class="score-circle">
+                <span class="score-value">72</span>
+                <span class="score-label">Balance Score</span>
+                <div class="status-badge">OPTIMAL</div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Sleep</h3>
+                <p>7h 45m</p>
+            </div>
+            <div class="card">
+                <h3>Stress</h3>
+                <p>Low</p>
+            </div>
+            <div class="card">
+                <h3>Activity</h3>
+                <p>4.2k steps</p>
+            </div>
+            <div class="card" style="background: #FFF9E5;">
+                <h3>Today's Tip</h3>
+                <p style="font-size: 12px; font-weight: normal;">Try 5 min of Box Breathing before your meeting.</p>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav-item active">Dashboard</div>
+            <div class="nav-item">Programs</div>
+            <div class="nav-item">Content</div>
+            <div class="nav-item">Settings</div>
+        </div>
+    </div>
+</body>
+</html>
